@@ -185,8 +185,8 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.5);
         }
 
-        .icon-1 { top: 35%; left: 21%; }
-        .icon-2 { top: 0%; right: 10%; }
+        .icon-1 { top: 35%; right: 72%; }
+        .icon-2 { top: 5%; right: 10%; }
         .icon-3 { bottom: 5%; right: 20%; }
 
 
@@ -324,6 +324,10 @@
         margin-top: 3rem;
     }
 
+    .icon-1 { top: 35%; right: 85%; }
+    .icon-2 { top: 15%; right: 10%; }
+    .icon-3 { bottom: 5%; right: 20%; }
+
     /* Ajuste da Seção About */
     .about-container {
         flex-direction: column;
@@ -333,5 +337,16 @@
     .about-img {
         width: 250px;
         height: 250px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Ajusta os cards automaticamente */
+        gap: 1.5rem;
+        padding: 0 10%;
+        justify-content: center;
+    }
+
+    .dots {
+        padding: 10px;
     }
 }
