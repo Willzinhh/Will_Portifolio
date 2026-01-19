@@ -1,0 +1,278 @@
+       /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+    /* O valor deve ser igual ou um pouco maior que a altura da sua navbar */
+    scroll-padding-top: 90px; 
+    scroll-behavior: smooth; /* Faz a rolagem ficar suave (opcional, mas recomendado) */
+}
+
+        body {
+            padding-top: 80px;
+            background-color: #0b0214;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            /* Fundo com efeito de grade e gradiente */
+            background-image: 
+                radial-gradient(circle at 80% 20%, rgba(123, 31, 162, 0.2), transparent 40%),
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+        }
+
+        /* Navbar */
+         nav {
+        
+                    position: fixed;
+                    /* Fixa no topo */
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 1000;
+                    /* Garante que fique acima de tudo */
+        
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+        
+                    /* Leve cor de fundo com transparência e desfoque (Glassmorphism) */
+                    background-color: rgba(11, 2, 20, 0.85);
+                    backdrop-filter: blur(10px);
+        
+                    /* Padding reduzido para não ocupar tanto espaço ao rolar */
+                    padding: 1.2rem 8%;
+                    border-bottom: 1px solid rgba(189, 99, 249, 0.1);
+                    /* Linha sutil roxa */
+                  transition: 0.3s;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #bd63f9;
+        
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ccc;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5% 10%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-text .highlight {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ff4081, #7b1fa2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            margin: 1.5rem 0;
+            color: #aaa;
+            max-width: 450px;
+            line-height: 1.6;
+        }
+
+        /* Botão e Ícones */
+        .cta-container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .btn-contact {
+            background: linear-gradient(90deg, #b030b0, #6a1b9a);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 0 20px rgba(176, 48, 176, 0.5);
+            transition: 0.3s;
+        }
+
+        .btn-contact:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(176, 48, 176, 0.8);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons i {
+            font-size: 1.2rem;
+            color: #888;
+            cursor: pointer;
+        }
+
+        /* Imagem de Perfil com Glow */
+        .hero-image {
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            padding: 10px;
+            background: linear-gradient(135deg, #7b1fa2, #ff4081);
+            box-shadow: 0 0 50px rgba(123, 31, 162, 0.6);
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #0b0214;
+        }
+
+        /* Flutuantes (Simulando os ícones ao redor) */
+        .floating-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #1a1a2e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .icon-1 { top: 35%; left: 21%; }
+        .icon-2 { top: 0%; right: 10%; }
+        .icon-3 { bottom: 5%; right: 20%; }
+
+
+        body {
+            background-color: #0b0214;
+            color: white;
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 10% 100%, rgba(123, 31, 162, 0.15), transparent 30%),
+                radial-gradient(circle at 90% 50%, rgba(255, 64, 129, 0.1), transparent 30%),
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+        }
+
+        section { padding: 80px 10%; max-width: 1200px; margin: 0 auto; }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; font-weight: 700; }
+
+        /* --- SEÇÃO ABOUT ME --- */
+        .about-container { display: flex; align-items: center; gap: 50px; }
+        .about-img {
+            width: 350px; height: 350px; border-radius: 50%;
+            border: 4px solid #7b1fa2; box-shadow: 0 0 30px rgba(123, 31, 162, 0.5);
+            object-fit: cover;
+        }
+        .about-content h3 { color: #bd63f9; margin-bottom: 15px; }
+        .about-content p { color: #ccc; margin-bottom: 20px; font-size: 0.95rem; }
+        .about-tags { display: flex; flex-direction: column; gap: 10px; }
+        .tag {
+            border: 1px solid #444; padding: 10px 20px; border-radius: 10px;
+            font-size: 0.85rem; display: flex; align-items: center; gap: 10px;
+            transition: 0.3s; cursor: default;
+        }
+        .tag:hover { border-color: #7b1fa2; background: rgba(123, 31, 162, 0.1); }
+
+        /* --- SEÇÃO SKILLS --- */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .skill-item { display: flex; align-items: center; justify-content: space-between; }
+        .dots { display: flex; gap: 5px; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: #333; }
+        .dot.active { background: #ff4081; box-shadow: 0 0 8px #ff4081; }
+        .dot.blue { background: #00bcd4; box-shadow: 0 0 8px #00bcd4; }
+
+        /* --- SEÇÃO PROJECTS --- */
+        .filter-btns { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+        .btn-filter {
+            background: transparent; border: 1px solid #444; color: white;
+            padding: 8px 20px; border-radius: 20px; cursor: pointer;
+        }
+        .btn-filter.active { background: linear-gradient(90deg, #ff4081, #7b1fa2); border: none; }
+        
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .project-card {
+            background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px; padding: 20px; transition: 0.3s;
+        }
+        .project-card:hover { transform: translateY(-10px); border-color: #7b1fa2; }
+        .project-img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+        .project-card p { font-size: 0.85rem; color: #aaa; margin-bottom: 20px; }
+        .project-links { display: flex; justify-content: space-between; }
+        .link-btn {
+            padding: 8px 15px; border-radius: 8px; text-decoration: none; font-size: 0.8rem;
+            display: flex; align-items: center; gap: 5px;
+        }
+        .repo { background: #222; color: white; }
+        .demo { background: linear-gradient(90deg, #ff4081, #7b1fa2); color: white; }
+
+        /* --- SEÇÃO CONTACT --- */
+        .contact-form { max-width: 600px; margin: 0 auto; background: rgba(20, 10, 30, 0.6); padding: 40px; border-radius: 20px; border: 1px solid #333; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: #aaa; }
+        input, textarea {
+            width: 100%; padding: 12px; background: #0b0214; border: 1px solid #444;
+            border-radius: 8px; color: white; outline: none;
+        }
+        input:focus, textarea:focus { border-color: #7b1fa2; }
+        .btn-submit {
+            width: 100%; padding: 15px; border-radius: 10px; border: none;
+            background: linear-gradient(90deg, #9c27b0, #e91e63);
+            color: white; font-weight: 700; cursor: pointer; transition: 0.3s;
+        }
+        .btn-submit:hover { opacity: 0.9; box-shadow: 0 0 20px rgba(156, 39, 176, 0.4); }
+
+        footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 1.2rem; }
+
+        #Contact {
+    padding-top: 0px; /* Menor que os 80px das outras seções */
+    scroll-margin-top: 0px; /* Força o navegador a parar onde você quer */
+}
