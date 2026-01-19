@@ -276,3 +276,62 @@
     padding-top: 0px; /* Menor que os 80px das outras seções */
     scroll-margin-top: 0px; /* Força o navegador a parar onde você quer */
 }
+
+@media (max-width: 768px) {
+    /* Ajuste da Navbar para mobile */
+    nav {
+        padding: 1rem 5%;
+        flex-direction: column; /* Empilha a logo e o menu se necessário */
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    /* Ajuste da Seção Hero */
+    .hero {
+        flex-direction: column; /* Empilha o texto e a imagem verticalmente */
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem; /* Diminui o título para caber na tela */
+    }
+
+    .hero-text .highlight {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+        margin: 1.5rem auto;
+    }
+
+    .cta-container {
+        justify-content: center;
+        flex-direction: column; /* Empilha botão e ícones sociais */
+        gap: 1rem;
+    }
+
+    /* Ajuste da Imagem Hero */
+    .image-wrapper {
+        width: 280px;  /* Reduz o tamanho da imagem para mobile */
+        height: 280px;
+        margin-top: 3rem;
+    }
+
+    /* Ajuste da Seção About */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 250px;
+        height: 250px;
+    }
+}
